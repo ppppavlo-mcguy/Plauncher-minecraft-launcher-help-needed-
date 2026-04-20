@@ -13,3 +13,7 @@ This launcher has a few requirements to work:
 - .minecraft\versions
 - .minecraft\libraries
 directories (folders) should be present, content not needed as the launcher is able to install versions by itself (tested)
+
+FLAWS
+1 - no mod support
+2 - few features untested, thereby possibly broken
