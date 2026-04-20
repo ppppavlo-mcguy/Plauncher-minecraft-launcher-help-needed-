@@ -195,9 +195,11 @@ def download_version(version, app=None):
         # 5. Auto-register as installation (IMPORTANT FIX)
         if app:
             profiles = load_profiles()
-            profiles[version] = version
-            save_profiles(profiles)
+            profile = profiles[selected_profile]
 
+            version = profile.get("version")
+            loader = profile.get("loader", "vanilla")
+			
             if hasattr(app, "load_profiles_ui"):
                 app.load_profiles_ui()
 
